@@ -1,2 +1,0 @@
-# extract lines with matching IDs. Works like grep, but much faster than using a while loop.
-awk 'NR==FNR {ids[$1]; next} {for (id in ids) if (index($0, id)) print $0}' ids.txt file.gff > output.gff
