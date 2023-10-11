@@ -260,5 +260,5 @@ Working with GFF/GFT/BED files
 ------- 
 
 search for each ID from a list in the GFF file and print the lines from the GFF file that contain the ID  
-`awk 'NR==FNR {ids[$1]; next} {for (id in ids) if (index($0, id)) print $0}' ids.txt file.gff > output.gff`  
+`awk 'NR==FNR {ids[$1]=1; next} {for (id in ids) if (index($0, id)) {print $0; break}}' ids.txt file.gff > output.gff`  
 
