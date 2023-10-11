@@ -255,3 +255,10 @@ remove duplicate, consecutive lines (emulates "uniq")
 remove duplicate, nonconsecutive lines  
 `awk '!a[$0]++' most concise script`  
 `awk '!($0 in a){a[$0];print}' most efficient script`  
+
+Working with GFF/GFT/BED files
+------- 
+
+search for each ID from a list in the GFF file and print the lines from the GFF file that contain the ID  
+`awk 'NR==FNR {ids[$1]; next} {for (id in ids) if (index($0, id)) print $0}' ids.txt file.gff > output.gff`  
+
