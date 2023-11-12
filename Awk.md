@@ -177,6 +177,9 @@ between fields
 Selective printing of certain lines  
 -------  
 
+Print only overlapping, identical lines across four files.  
+`awk 'NR==FNR { seen[$0] = 1; next } { if ($0 in seen && seen[$0] == file_count) seen[$0] = file_count + 1 } END { for (entry in seen) if (seen[entry] == file_count + 1) print entry }' file_count=1 file1 file2 file_count=2 file3 file_count=3 file4`
+
 print first 10 lines of file (emulates behavior of "head")  
 `awk 'NR < 11'`  
 
