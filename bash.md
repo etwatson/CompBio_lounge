@@ -678,9 +678,10 @@ for filename in *;
 
 # Using a defined array
 pops=(BH BR SC SD SH FHL)
-for i in "${pops[@]}"; do
+for i in "${pops[@]}";
+  do
     echo ${i};
-done
+  done
 
 ```
 
