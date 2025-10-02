@@ -704,3 +704,25 @@ case $weather in
   ;;
 esac
 ```
+#### Doing math
+
+```bash
+#!/bin/bash
+
+# only integers
+for i in $(seq 1 10);
+ do
+  echo $(($i + 10));
+done;
+
+for i in $(seq 1 10);
+ do
+  echo $(($i * 10));
+done;
+
+for i in $(seq 1 10);
+ do
+  echo $(($i / 10));
+done;
+
+```
