@@ -649,6 +649,11 @@ while [$counter -gt 2]; do
   echo The counter is $counter
   counter=counter-1
 done
+
+# Reading in a file and defining variables
+while read -r chrom start stop; do
+    echo ${chrom};
+done < bed_file.bed
 ```
 
 #### For Loops
@@ -670,6 +675,13 @@ for filename in *;
   do
     echo "Content: " >> $filename
   done
+
+# Using a defined array
+pops=(BH BR SC SD SH FHL)
+for i in "${pops[@]}"; do
+    echo ${i};
+done
+
 ```
 
 #### Case Statements
