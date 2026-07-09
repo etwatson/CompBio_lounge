@@ -1,3 +1,6 @@
+## AWK is a data-driven scripting language designed for text processing, data extraction, and reporting. It is standard on Unix-like operating systems like Linux and macOS. The tool is commonly used to parse tables, logs, and CSV files.
+AWK shines because it automatically loops over every line of input behind the scenes, allowing you to filter data and perform mathematical calculations using short, ultra-efficient one-liners.
+
 File spacing  
 -------  
 
