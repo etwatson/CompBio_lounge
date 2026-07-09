@@ -1,12 +1,19 @@
 ## Perl one-liners are complete, compact Perl programs written entirely inside a single line of a terminal command prompt to perform rapid text processing, file editing, or system administration tasks. They eliminate the need to create, save, and run a dedicated script file for simple, throwaway operations.
 
 Perl one-liners rely on combinations of specialized command-line switches to manage loops, inputs, and outputs automatically:
+	
 	-e: Tells Perl to execute the string of code directly from the command line.
+	
 	-n: Wraps an implicit while (<>) { ... } loop around the code, processing input file(s) line-by-line without printing them by default.
+	
 	-p: Similar to -n, but automatically prints the content of the default variable ($_) at the end of each loop iteration.
+	
 	-i: Enables in-place file editing, updating the original file directly instead of streaming the output to the terminal.
+	
 	-a: Activates "autosplit" mode, which automatically separates each line into individual fields and stores them in the @F array (similar to awk).
+	
 	-F: Specifies the regular expression delimiter used by the -a switch to split data fields.
+	
 	-l: Automatically strips trailing newlines from lines on input and appends them back on output.
 
 Hi:
