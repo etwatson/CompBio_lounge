@@ -3,7 +3,8 @@
 #Prepare Environment for Large MEmory Tasks
 
 # Set the swappiness 
-# Swappiness is a Linux kernel parameter that controls how aggressively your system moves inactive application data from RAM to the swap space on your drive. It ranges from 0 to 100 (or 200 on some recent kernels). A higher value prefers swapping applications out to free up memory for the cache; a lower value forces the system to keep applications in RAM
+#   Swappiness is a Linux kernel parameter that controls how aggressively your system moves inactive application data from RAM to the swap space on your drive. 
+#      It ranges from 0 to 100 (or 200 on some recent kernels). A higher value prefers swapping applications out to free up memory for the cache; a lower value forces the system to keep applications in RAM
 echo "Setting swappiness to 10..."
 sudo sysctl vm.swappiness=20
 
